@@ -4,6 +4,11 @@ const port = process.env.PORT || 5555
 
 const app = express()
 
+// Middleware
+// @desc this helps to pass objects through request
+app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
+
 // APIs
 app.use('/api/v1/goals', require('./routes/goalRoutes'))
 

@@ -1,5 +1,5 @@
 // @desc Get goals
-// @rotue GET // api/v1/goals
+// @route GET // api/v1/goals
 // @access private
 const getGoals = (req, res) => {
     res.status(200).json({
@@ -8,16 +8,17 @@ const getGoals = (req, res) => {
 }
 
 // @desc Set goals
-// @rotue POST // api/v1/goals
+// @route POST // api/v1/goals
 // @access private
 const setGoals = (req, res) => {
+    console.log(req.body)
     res.status(200).json({
         message: 'Set goal'
     })
 }
 
 // @desc PUT goals
-// @rotue PUT // api/v1/goals/:id
+// @route PUT // api/v1/goals/:id
 // @access private
 const updateGoals = (req, res) => {
     res.status(200).json({
@@ -26,7 +27,7 @@ const updateGoals = (req, res) => {
 }
 
 // @desc DELETE goals
-// @rotue DELETE // api/v1/goals/:id
+// @route DELETE // api/v1/goals/:id
 // @access private
 const delGoals = (req, res) => {
     res.status(200).json({
