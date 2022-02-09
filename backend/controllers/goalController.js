@@ -14,7 +14,8 @@ const setGoals = (req, res) => {
     // console.log(req.body)
     // add error & exception handling 
     if(!req.body.text){
-        res.status(400).json(({message: 'Please add a text field'}))
+        res.status(400)
+        throw new Error(`Please add a text field`)
     }
     res.status(200).json({
         message: 'Set goal'

@@ -1,5 +1,6 @@
 const express = require('express')
 const dotenv = require('dotenv').config()
+const {errorHandler} = require('./middleware/errorMiddleware')
 const port = process.env.PORT || 5555
 
 const app = express()
@@ -17,5 +18,7 @@ app.get('/', (req, res)=> {
         message : 'This is the Root'
     })
 })
+
+app.use(errorHandler)
 
 app.listen(port, ()=> console.log(`Server Started on ${port}`))
