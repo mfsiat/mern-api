@@ -6,3 +6,7 @@
 - POST: **`api/v1/goals`**
 - PUT: **`api/v1/goals`**
 - DELETE: **`api/v1/goals`**
+
+## DB Connection 
+
+- Added mongodb for database
