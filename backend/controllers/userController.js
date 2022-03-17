@@ -57,7 +57,24 @@ const registerUser = asyncHandler(async (req, res) => {
 // @route POST /api/v1/users/login
 // @access Public
 const loginUser = asyncHandler(async (req, res) => {
-  res.json({ message: "Login User" });
+  const {email, password} = req.body
+
+  // Check for user email
+  const user = await User.findOne({email})
+
+  // compare password 
+  if(user && (await bcrypt.compare(password, user.password))) {
+    res.json({
+      _id: user.id,
+      name: user.name,
+      email: user.email,      
+    })
+  } else {
+    res.status(400)
+    throw new Error('Invalid credentials')
+  }
+
+  // res.json({ message: "Login User" });
 });
 
 
