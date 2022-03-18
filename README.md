@@ -28,5 +28,11 @@ curl --location --request POST 'http://localhost:5555/api/v1/goals' \
     - controllers
   - Middleware
     - error handling middleware (custom error handler)
+    - auth middleware for authentication
   - Model
     - db structure & model
+
+## Middleware 
+
+- Auth middleware checks the token and verifies the user login 
+- Middleware is the function that runs between the response and request cycle 
