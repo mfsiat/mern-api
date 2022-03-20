@@ -53,6 +53,7 @@ const registerUser = asyncHandler(async (req, res) => {
 // @desc Login new user
 // @route POST /api/v1/users/login
 // @access Public
+debugger;
 const loginUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
