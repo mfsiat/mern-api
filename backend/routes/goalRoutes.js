@@ -13,8 +13,8 @@ const { protect } = require('../middleware/authMiddleware')
 
 // Get & Post
 // debugger;
-router.route("/").get(protect, getGoals).post(setGoals);
+router.route("/").get(protect, getGoals).post(protect, setGoals);
 // Update & Delete
-router.route("/:id").delete(delGoals).put(updateGoals);
+router.route("/:id").delete(protect, delGoals).put(protect, updateGoals);
 
 module.exports = router;
