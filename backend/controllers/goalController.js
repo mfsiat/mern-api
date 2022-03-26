@@ -7,7 +7,8 @@ const Goal = require("../model/goalModel");
 // @access private
 const getGoals = asyncHandler(async (req, res) => {
   // create the connection between mongo and api
-  const goals = await Goal.find();
+  // get all goals from the db
+  const goals = await Goal.find({ user: req.user.id });
   res.status(200).json(goals);
 });
 
@@ -24,6 +25,7 @@ const setGoals = asyncHandler(async (req, res) => {
 
   const goal = await Goal.create({
     text: req.body.text,
+    user: req.user.id,
   });
 
   res.status(200).json(goal);
