@@ -53,7 +53,7 @@ const registerUser = asyncHandler(async (req, res) => {
 // @desc Login new user
 // @route POST /api/v1/users/login
 // @access Public
-debugger;
+// debugger;
 const loginUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
@@ -81,6 +81,7 @@ const loginUser = asyncHandler(async (req, res) => {
 // @access Private
 const getMe = asyncHandler(async (req, res) => {
   // res.json({ message: "User data display" });
+  // whenever user log in we get the user data
   const {_id, name, email} = await User.findById(req.user.id)
 
   res.status(200).json({
