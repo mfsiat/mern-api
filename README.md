@@ -34,5 +34,13 @@ curl --location --request POST 'http://localhost:5555/api/v1/goals' \
 
 ## Middleware 
 
-- Auth middleware checks the token and verifies the user login 
-- Middleware is the function that runs between the response and request cycle 
+- Auth middleware 
+- Route middleware 
+
+## RoadMap 
+
+- Basic CRUD api with authentication 
+- User based get, post, put, delete
+- JWT token for user authentication
+- JWT token for user create, login 
+- JWT token for goal create, update, delete
