@@ -12,6 +12,10 @@ function Register() {
   const { name, email, password, password2 } = formData;
 
   const onChange = () => {};
+  
+  const onSubmit = (e) => {
+    e.preventDefault()
+  };
 
   return (
     <>
@@ -22,7 +26,8 @@ function Register() {
         <p>Please Create an account</p>
       </section>
       <section className="form">
-        <form>
+        <form onSubmit={onSubmit}>
+          <div className="form-group">
           <input
             type="text"
             className="form-control"
@@ -32,6 +37,43 @@ function Register() {
             placeholder="Enter Your Name"
             onChange={onChange}
           />
+          </div>
+          <div className="form-group">
+          <input
+            type="email"
+            className="form-control"
+            id="email"
+            name="email"
+            value={email}
+            placeholder="Enter Your Email"
+            onChange={onChange}
+          />
+          </div>
+          <div className="form-group">
+          <input
+            type="password"
+            className="form-control"
+            id="password"
+            name="password"
+            value={password}
+            placeholder="Enter Your Password"
+            onChange={onChange}
+          />
+          </div>
+          <div className="form-group">
+          <input
+            type="password"
+            className="form-control"
+            id="password2"
+            name="password2"
+            value={password2}
+            placeholder="Confirm Your Password"
+            onChange={onChange}
+          />
+          </div>
+          <div className="form-group">
+            <button type="submit" className="btn btn-block">Submit</button>
+          </div>
         </form>
       </section>
     </>
