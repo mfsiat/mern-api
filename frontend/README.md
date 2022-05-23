@@ -18,3 +18,11 @@
 
 - Middleware that allows to return functions, rather than just actions.
 - it allows for delayed actions, including working with promises.
+
+### Code snippets 
+
+- Conditional statements 
+```js
+{user ? () : ()}
+```
+- This means **`if user than show something :or show something else`**
