@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Spinner from "../components/Spinner";
-import { reset } from '../features/auth/authSlice';
+import { login, reset } from '../features/auth/authSlice';
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -51,6 +51,8 @@ function Login() {
       email, 
       password,
     }
+
+    dispatch(login(userData))
   };
 
   if(isLoading) {
