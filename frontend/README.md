@@ -19,6 +19,14 @@
 - Middleware that allows to return functions, rather than just actions.
 - it allows for delayed actions, including working with promises.
 
+### Create goals by authenticating 
+
+- to create a goal we need to be registered 
+- so we need to get the token to verify us first at the time of creating a goal
+- on **`thunAPI`** we can get anything from the state
+- we get the user token from there
+- then just pass the token with the data
+
 ### Code snippets 
 
 - Conditional statements 
