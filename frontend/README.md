@@ -27,6 +27,11 @@
 - we get the user token from there
 - then just pass the token with the data
 
+### Delete goals 
+
+- thunk function for deleting goals
+- thunk function is on the goalSlice
+
 ### Code snippets 
 
 - Conditional statements 
