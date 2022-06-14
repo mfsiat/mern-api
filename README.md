@@ -6,17 +6,18 @@
 - Backend contains server scripts ( node, mongo, express )
 - Frontend contains graphical user interface GUI ( react )
 
-## Routes / API
+## Installation
 
-- GET: **`api/v1/goals`**
-- POST: **`api/v1/goals`**
-```bash
-curl --location --request POST 'http://localhost:5555/api/v1/goals' \
---header 'Content-Type: application/x-www-form-urlencoded' \
---data-urlencode 'text=hello this is siat'
+- You can run the server with **`docker`** or just **`npm run dev`**
+- Copy the .env.example to .env 
+- Run commands 
 ```
-- PUT: **`api/v1/goals`**
-- DELETE: **`api/v1/goals`**
+# Docker
+docker-compose up --build
+
+# NPM 
+npm run dev
+```
 
 ## Usage 
 

@@ -17,4 +17,4 @@ USER node
 EXPOSE 5555
 
 # Run the app
-CMD ["npm", "run", "server"]
+CMD ["npm", "run", "dev"]

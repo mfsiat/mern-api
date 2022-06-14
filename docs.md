@@ -44,3 +44,15 @@ curl --location --request POST 'http://localhost:5555/api/v1/goals' \
 - JWT token for user authentication
 - JWT token for user create, login 
 - JWT token for goal create, update, delete
+
+## Routes / API
+
+- GET: **`api/v1/goals`**
+- POST: **`api/v1/goals`**
+```bash
+curl --location --request POST 'http://localhost:5555/api/v1/goals' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'text=hello this is siat'
+```
+- PUT: **`api/v1/goals`**
+- DELETE: **`api/v1/goals`**
